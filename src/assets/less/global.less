@@ -1,0 +1,161 @@
+* {
+	font-family: Arial, sans-serif;
+    color: @black;
+}
+html {
+	min-width: 320px;
+	max-width: 1920px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.wrapper {
+	height: 100%;
+	width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+	margin-left: auto;
+	margin-right: auto;
+    .sm({
+        padding-left: 22px;
+        padding-right: 22px;
+    });
+    .xl({
+        width: 1440px;
+        padding-left: 40px;
+        padding-right: 40px;
+    });
+}
+
+.title-h1 {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: uppercase;
+    .sm({
+        font-size: 24px;
+        line-height: 28px;
+    });
+    .lg({
+        font-size: 27px;
+        line-height: 31px;
+    });
+}
+.title-h2 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    .sm({
+        font-size: 22px;
+        line-height: 25px;
+    });
+    .lg({
+        font-size: 24px;
+        line-height: 28px;
+    });
+}
+.title-h3 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    .sm({
+        font-size: 20px;
+        line-height: 23px;
+    });
+    .lg({
+        font-size: 22px;
+        line-height: 25px;
+    });
+}
+.text-18 {
+    font-size: 14px;
+    line-height: 16px;
+    .sm({
+        font-size: 16px;
+        line-height: 18px;
+    });
+    .lg({
+        font-size: 18px;
+        line-height: 21px;
+    });
+}
+.text-16 {
+    font-size: 14px;
+    line-height: 16px;
+    .sm({
+        font-size: 16px;
+        line-height: 18px;
+    });
+    .lg({
+        font-size: 16px;
+        line-height: 18px;
+    });
+}
+
+.breadscrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    & li {
+        & a {
+            font-size: 14px;
+            line-height: 16px;
+            white-space: nowrap;
+            position: relative;
+            &:before {
+                content: '';
+                width: 100%;
+                height: 1px;
+                background-color: transparent;
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+            }
+        }
+        &:hover {
+            & a {
+                position: relative;
+                &:before {
+                    background-color: @black;
+                }
+            }
+        }
+        position: relative;
+        padding-right: 16px;
+        &:after {
+            content: url('../img/breadscrumb-decor.svg');
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0,-50%);
+
+        }
+    }
+}
+
+input, select, textarea {
+    border: 1px solid #B3B3B3;
+    padding: 7px 10px;
+    color: #B3B3B3;
+    font-size: 14px;
+    line-height: 16px;
+    .sm({
+        font-size: 16px;
+        line-height: 18px;
+    });
+    .lg({
+        font-size: 16px;
+        line-height: 18px;
+    });
+}
+textarea {
+    resize: none;
+}
+
+
+&.error {
+    color: @red;
+    border-color: @red;
+  }

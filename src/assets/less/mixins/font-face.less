@@ -1,0 +1,9 @@
+.font-face(@font-family, @file-path, @weight: normal, @style: normal, @display: swap) {
+	@font-face {
+    src: url('@{file-path}.woff2') format('woff2'), url('@{file-path}.woff') format('woff'),;
+		font-family: @font-family;
+		font-weight: @weight;
+		font-style: @style;
+		font-display: @display;
+  } 
+}

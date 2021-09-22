@@ -1,0 +1,92 @@
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element: */
+  }
+  select.error + .select-selected {
+    color: @red;
+    border-color: @red;
+  }
+  .select-selected {
+    border: 1px solid #b3b3b3;
+    height: 32px;
+    padding: 7px 10px;
+    color: #B3B3B3;
+    font-size: 14px;
+    line-height: 16px;
+    background-color: @white;
+    .sm({
+        font-size: 16px;
+        line-height: 18px;
+    });
+    .lg({
+        font-size: 16px;
+        line-height: 18px;
+    });
+  }
+  
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+    position: absolute;
+    content: url('../img/select-arrow.svg');
+    top: 50%;
+    right: 6px;
+    width: 20px;
+    height: 20px;
+    transform: translate(0,-50%);
+  }
+  .select-selected:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 100%;
+    background-color: @blue;
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    transform: translate(0,-50%) scale(1,-1);
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div {
+    padding: 12px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 16px;
+    .sm({
+        font-size: 16px;
+        line-height: 18px;
+    });
+    .lg({
+        font-size: 18px;
+        line-height: 21px;
+    });
+  }
+  
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background-color: @white;
+    border: 1px solid #b3b3b3;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: @blue;
+    color: @white;
+  }
